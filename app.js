@@ -13,6 +13,9 @@ const users = [
 app.use(bodyparser.json())
 app.use((req, res, next)=>{console.log("work")
 next()})
+app.get('/', (req,res, next)=>{
+    res.json({message:"entry point"})
+})
 app.post('/login', (req, res) => {
     console.log(req.body)
 
